@@ -124,15 +124,15 @@ while place_order:
             customer_item_number = input("please input an item number: ")
             
             # 3. Check if the customer typed a number
-            if not customer_item_number.isdigit():
-                print("please choose a valid number.")
+            if customer_item_number.isdigit():
+                #print("please choose a valid number.")
                 # Convert the menu selection to an integer
                 customer_item_number = int(customer_item_number)
                 
                 # 4. Check if the menu selection is in the menu items
-                if int(customer_item_number) in menu_items.keys():
+                if customer_item_number in menu_items.key():
                     # Store the item name as a variable
-                    item_name = menu_items[int(customer_item_number)]
+                    item_name = menu_items[customer_item_number]["Item name"]
 
                     # Ask the customer for the quantity of the menu item
                     quantity = input("please input a number for quantity ")
