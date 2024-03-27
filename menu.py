@@ -139,16 +139,19 @@ while place_order:
 
                     # Check if the quantity is a number, default to 1 if not
                     if quantity.isdigit():
+                       quantity = int(quantity)
+                    else:
+                        quantity = 1
                        
                     # Add the item name, price, and quantity to the order list
-                       order.append({
-                           "Item name": item_name,
-                           "Price": menu_items[customer_item_number]["Price"],
-                           "Quantity": quantity
-                       })
+                    order.append({
+                        "Item name": item_name,
+                       "Price": menu_items[customer_item_number]["Price"],
+                       "Quantity": quantity
+                    })
                     # Tell the customer that their input isn't valid
-                    else:
-                        print("that input is invalid")
+                    
+                    print("that input is invalid")
 
 
                 # Tell the customer they didn't select a menu option
