@@ -205,9 +205,9 @@ for item in order:
     item_quantity = item.values()
 
     # 8. Calculate the number of spaces for formatted printing
-    item_category_name = (25 - len(item_name)) * " "
-    item_category_price = ()
-    item_category_quantity = ()
+    item_category_name = (25 - len(item_name)) * ' '
+    item_category_price = (5 - len(str(item_price))) * ' '
+    item_category_quantity = (9 - len(str(item_quantity))) * ' '
     # 9. Create space strings
 
 
