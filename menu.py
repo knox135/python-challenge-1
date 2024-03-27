@@ -180,6 +180,7 @@ while place_order:
                 # their order
                     print("Thank you for your order")
                 # Exit the keep ordering question loop
+                    place_order = False
                     break
                 # Tell the customer to try again
                 case _:
@@ -210,7 +211,7 @@ for item in order:
     item_category_price = (5 - len(str(item_price))) * ' '
     item_category_quantity = (9 - len(str(item_quantity))) * ' '
     # 9. Create space strings
-
+    print(f"{item_name}{item_category_name} | ${item_price}{item_category_price} | {item_quantity}{item_category_quantity}")
 
     # 10. Print the item name, price, and quantity
  
