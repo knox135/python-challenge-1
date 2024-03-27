@@ -201,12 +201,13 @@ for item in order:
 
     # 7. Store the dictionary items as variables
     item_name = item.values()
-    item_nameprice = item.values()
+    item_price = item.values()
     item_quantity = item.values()
 
     # 8. Calculate the number of spaces for formatted printing
-    
-
+    item_category_name = (25 - len(item_name)) * " "
+    item_category_price = ()
+    item_category_quantity = ()
     # 9. Create space strings
 
 
