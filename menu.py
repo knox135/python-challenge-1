@@ -151,12 +151,12 @@ while place_order:
                         "Quantity": quantity
                     })
                     # Tell the customer that their input isn't valid
-                    
-                    #print("Your input is invalid")
+                else:    
+                    print("Your input is invalid")
                 
-                else:
+            else:
             # Tell the customer they didn't select a menu option
-                    print(f"{menu_category} was not a menu option.")
+                print(f"{menu_category} was not a menu option.")
         else:
         # Tell the customer they didn't select a number
             print("You didn't select a number.")
@@ -192,7 +192,7 @@ while place_order:
 print("This is what we are preparing for you.\n")
 
 # Uncomment the following line to check the structure of the order
-print(order)
+#print(order)
 
 print("Item name                 | Price  | Quantity")
 print("--------------------------|--------|----------")
@@ -206,7 +206,7 @@ for item in order:
 
     # 8. Calculate the number of spaces for formatted printing
     # 9. Create space strings
-    item_name_format = (25 - len(item_name)) * ' '
+    item_name_format = (25 - len(str(item_name))) * " "
     item_price_format = (5 - len(str(item_price))) * ' '
     quantity_format = (9 - len(str(item_quantity))) * ' '
     
@@ -216,4 +216,5 @@ for item in order:
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
-    cost = format(sum([item["Price"] * item["Quantity"] for item in order]), ".2f")
+total = format(sum([item["Price"] * item["Quantity"] for item in order]), ".2f")
+print(f"the total price of the order is: {total}")
