@@ -152,14 +152,14 @@ while place_order:
                     })
                     # Tell the customer that their input isn't valid
                 else:    
-                    print("Your input is invalid")
+                    print(f"{menu_selection} is invalid")
                 
             else:
             # Tell the customer they didn't select a menu option
                 print(f"{menu_category} was not a menu option.")
         else:
         # Tell the customer they didn't select a number
-            print("You didn't select a number.")
+            print(f"{menu_category} is not a number.")
         
         while True:
         # Ask the customer if they would like to order anything else
@@ -212,9 +212,9 @@ for item in order:
     
 
     # 10. Print the item name, price, and quantity
-    print(f"{item_name_format}{item_name} | ${item_price_format}{item_price} | {quantity_format}{quantity}")
+    print(f"{item_name}{item_name_format} | ${item_price}{item_price_format} | {quantity}{quantity_format}")
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 total = format(sum([item["Price"] * item["Quantity"] for item in order]), ".2f")
-print(f"the total price of the order is: {total}")
+print(f"the total price of the order is: ${total}")
