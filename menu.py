@@ -140,7 +140,7 @@ while place_order:
 
                     # Check if the quantity is a number, default to 1 if not
                     if quantity.isdigit():
-                       quantity = int(quantity)
+                        quantity = int(quantity)
                     else:
                         quantity = 1
                        
@@ -166,16 +166,16 @@ while place_order:
             keep_ordering = input("Would you like to keep ordering? (Y)es or (N)o ")
 
         # 5. Check the customer's input
-                #if keep_ordering.lower() != "y" or keep_ordering.upper() != "Y":
-            match keep_ordering.lower():
-                case "y" | "yes":
+                
+            match keep_ordering:
+                case "y" | "yes" | "Y":
                     place_order = True
                 # Keep ordering
                     break   
                 # Exit the keep ordering question loop
                 case "n" | "No":
                 # Complete the order
-                    #place_order = False
+                
                 # Since the customer decided to stop ordering, thank them for
                 # their order
                     print("Thank you for your order")
@@ -212,7 +212,7 @@ for item in order:
     
 
     # 10. Print the item name, price, and quantity
-    print(f"{item_name}{item_name_format} | ${item_price}{item_price_format} | {quantity}{quantity_format}")
+    print(f"{item_name}{item_name_format} | ${item_price}{item_price_format} | {item_quantity}{quantity_format}")
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
